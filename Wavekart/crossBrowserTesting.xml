@@ -1,0 +1,23 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Sample Suite"  thread-count="5" parallel="tests" >
+    <!-- Define the test that will be run -->
+    <listeners>
+        <listener class-name="com.wavekart.utilities.ExtentReportManager"/>
+    </listeners>
+    <test name="Chrome Test">
+        <!-- Define the classes to be tested -->
+        <parameter name="os" value="Windows"/>
+        <parameter name="browser" value="chrome"/>
+        <classes>
+            <class name="com.wavekart.testCases.TC001_LoginWaveCartTest"/>
+        </classes>
+    </test>
+    <test name="Edge Test">
+        <!-- Define the classes to be tested -->
+        <parameter name="os" value="Windows"/>
+        <parameter name="browser" value="edge"/>
+        <classes>
+            <class name="com.wavekart.testCases.TC001_LoginWaveCartTest"/>
+        </classes>
+    </test>
+</suite>
